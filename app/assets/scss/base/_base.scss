@@ -1,0 +1,58 @@
+body{
+  font-family: $font-proxima;
+  overflow-x: hidden;
+}
+.img{
+  max-width: 100%;
+}
+.container{
+  max-width: 1172px;
+  margin: 0 auto;
+}
+.title{
+  font-family: $font-proxima-ebold;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  position: relative;
+  max-width: 460px;
+  z-index: 1;
+  transition: all .3s;
+
+  &::before{
+    content: '';
+    width: 28px;
+    height: 29px;
+    background: url('/assets/images/icons/icon-decor.svg') no-repeat;
+    position: absolute;
+    top: -47px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &.title_light{
+    color: $text-color;
+
+  }
+  &.title_dark{
+    color: $second-text-color;
+  }
+  span{
+    display: block;
+  }
+}
+
+.animated{
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
