@@ -2,10 +2,18 @@ $base-color: rgba(217, 223, 230, 0.2);
 $btn-color: #FCCF18;
 
 /* --- text colors --- */
-$text-color: #fff;
-$second-text-color: #233148;
+$color-light: #fff;
+$color-dark: #252525;
+$color-decor: #7637DD;
 
 /* --- bg colors --- */
-$base-bg: #EAEFF5;
-$main-bg: #233148;
-$second-bg: #1F65D9;
+$bg-light: #fff;
+$bg-dark: #252525;
+$bg-decor: #7637DD;
+
+
+/* --- header --- */
+$header-bg: #252525;
+
+$font-lato: 'Lato', sans-serif;
+$font-poppins: 'Poppins', sans-serif;

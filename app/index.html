@@ -6,13 +6,207 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reliable-PSD</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/styles/style.min.css">
 </head>
 
 <body>
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="" class="logo">
+        <span class="logo-img"></span>
+      </a>
+      <nav class="nav overlay">
+        <ul class="nav__list">
+          <li class="nav-item"><a href="#" class="nav__link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav__link">Services</a></li>
+          <li class="nav-item"><a href="#" class="nav__link">News</a></li>
+          <li class="nav-item"><a href="#" class="nav__link">Contacts</a></li>
+        </ul>
+      </nav>
+      <button class="menu"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <path class="menu__line line-top"
+            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+          <path class="menu__line line-middle" d="M  30,50 H 80" />
+          <path class="menu__line line-bottom"
+            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+      </button>
 
+      <!-- <span class="overlay"></span> -->
+    </div>
+  </header>
+  <section class="slider margin_bottom">
+    <div class="container slider__container">
+      <!-- Slider main container -->
+      <div class="swiper-container slider__content">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="assets/images/slider-1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/images/slider-1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/images/slider-1.jpg" alt=""></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-  <script src="assets/js/main.min.js"></script>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-buttons-box">
+          <div class="swiper-button swiper-button-prev"></div>
+          <div class="swiper-button swiper-button-next"></div>
+        </div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <div class="slider__aside">
+        <h2 class="title main_title">Let’s build something great!</h2>
+        <a href="#" class="btn default_btn icon_btn btn_sm">Learn More
+          <img class="arrow" src="assets/images/icons/icon-arrow-mini.svg" alt="">
+        </a>
+      </div>
+    </div>
+
+  </section>
+  <section class="services margin_bottom">
+    <div class="container services__container">
+      <div class="section-name">Services</div>
+      <div class="title-box">
+        <div class="title title_section">Full-service digital capabilities from end to end.</div>
+        <a href="#" class="show-all">See all services
+          <img class="arrow" src="assets/images/icons/icon-arrow.svg" alt="">
+        </a>
+      </div>
+      <div class="services-box">
+        <div class="services-item">
+          <div class="services-item__name">Experiences</div>
+          <div class="services-item__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius.</div>
+          <div class="services-item__text">Molestie facilisis sit nisl imperdiet nunc, enim sed a. Mi ac ut arcu
+            sollicitudin pellentesque. </div>
+          <a href="#" class="services-item__btn">
+            <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="a" fill="#fff">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11 23.5a1.5 1.5 0 003 0V14h9.5a1.5 1.5 0 000-3H14V1.5a1.5 1.5 0 00-3 0V11H1.5a1.5 1.5 0 000 3H11v9.5z" />
+              </mask>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11 23.5a1.5 1.5 0 003 0V14h9.5a1.5 1.5 0 000-3H14V1.5a1.5 1.5 0 00-3 0V11H1.5a1.5 1.5 0 000 3H11v9.5z"
+                fill="#252525" />
+              <path
+                d="M14 14v-2h-2v2h2zm0-3h-2v2h2v-2zm-3 0v2h2v-2h-2zm0 3h2v-2h-2v2zm1.5 9a.5.5 0 01.5.5H9a3.5 3.5 0 003.5 3.5v-4zm-.5.5a.5.5 0 01.5-.5v4a3.5 3.5 0 003.5-3.5h-4zm0-9.5v9.5h4V14h-4zm11.5-2H14v4h9.5v-4zm-.5.5a.5.5 0 01.5-.5v4a3.5 3.5 0 003.5-3.5h-4zm.5.5a.5.5 0 01-.5-.5h4A3.5 3.5 0 0023.5 9v4zM14 13h9.5V9H14v4zM12 1.5V11h4V1.5h-4zm.5.5a.5.5 0 01-.5-.5h4A3.5 3.5 0 0012.5-2v4zm.5-.5a.5.5 0 01-.5.5v-4A3.5 3.5 0 009 1.5h4zm0 9.5V1.5H9V11h4zM1.5 13H11V9H1.5v4zm.5-.5a.5.5 0 01-.5.5V9A3.5 3.5 0 00-2 12.5h4zm-.5-.5a.5.5 0 01.5.5h-4A3.5 3.5 0 001.5 16v-4zm9.5 0H1.5v4H11v-4zm2 11.5V14H9v9.5h4z"
+                fill="#252525" mask="url(#a)" />
+            </svg>
+          </a>
+        </div>
+        <div class="services-item">
+          <div class="services-item__name">Campaigns</div>
+          <div class="services-item__title">Cras sit cras eget interdum. Suspendisse nibh mattis non fames sit.</div>
+          <div class="services-item__text">Erat in ut nunc, morbi dictumst et lectus ligula enim. Porta porta nibh purus
+            ac sit morbi et.</div>
+          <a href="#" class="services-item__btn">
+            <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="a" fill="#fff">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11 23.5a1.5 1.5 0 003 0V14h9.5a1.5 1.5 0 000-3H14V1.5a1.5 1.5 0 00-3 0V11H1.5a1.5 1.5 0 000 3H11v9.5z" />
+              </mask>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11 23.5a1.5 1.5 0 003 0V14h9.5a1.5 1.5 0 000-3H14V1.5a1.5 1.5 0 00-3 0V11H1.5a1.5 1.5 0 000 3H11v9.5z"
+                fill="#252525" />
+              <path
+                d="M14 14v-2h-2v2h2zm0-3h-2v2h2v-2zm-3 0v2h2v-2h-2zm0 3h2v-2h-2v2zm1.5 9a.5.5 0 01.5.5H9a3.5 3.5 0 003.5 3.5v-4zm-.5.5a.5.5 0 01.5-.5v4a3.5 3.5 0 003.5-3.5h-4zm0-9.5v9.5h4V14h-4zm11.5-2H14v4h9.5v-4zm-.5.5a.5.5 0 01.5-.5v4a3.5 3.5 0 003.5-3.5h-4zm.5.5a.5.5 0 01-.5-.5h4A3.5 3.5 0 0023.5 9v4zM14 13h9.5V9H14v4zM12 1.5V11h4V1.5h-4zm.5.5a.5.5 0 01-.5-.5h4A3.5 3.5 0 0012.5-2v4zm.5-.5a.5.5 0 01-.5.5v-4A3.5 3.5 0 009 1.5h4zm0 9.5V1.5H9V11h4zM1.5 13H11V9H1.5v4zm.5-.5a.5.5 0 01-.5.5V9A3.5 3.5 0 00-2 12.5h4zm-.5-.5a.5.5 0 01.5.5h-4A3.5 3.5 0 001.5 16v-4zm9.5 0H1.5v4H11v-4zm2 11.5V14H9v9.5h4z"
+                fill="#252525" mask="url(#a)" />
+            </svg>
+          </a>
+        </div>
+        <div class="services-item">
+          <div class="services-item__name">Studio</div>
+          <div class="services-item__title">Mattis amet tincidunt sem morbi lacus blandit donec arcu dolor.</div>
+          <div class="services-item__text">Bibendum molestie tellus maecenas eget. Risus aenean vestibulum id porttitor
+            mattis.</div>
+          <a href="#" class="services-item__btn">
+            <svg width="25" height="25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="a" fill="#fff">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11 23.5a1.5 1.5 0 003 0V14h9.5a1.5 1.5 0 000-3H14V1.5a1.5 1.5 0 00-3 0V11H1.5a1.5 1.5 0 000 3H11v9.5z" />
+              </mask>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M11 23.5a1.5 1.5 0 003 0V14h9.5a1.5 1.5 0 000-3H14V1.5a1.5 1.5 0 00-3 0V11H1.5a1.5 1.5 0 000 3H11v9.5z"
+                fill="#252525" />
+              <path
+                d="M14 14v-2h-2v2h2zm0-3h-2v2h2v-2zm-3 0v2h2v-2h-2zm0 3h2v-2h-2v2zm1.5 9a.5.5 0 01.5.5H9a3.5 3.5 0 003.5 3.5v-4zm-.5.5a.5.5 0 01.5-.5v4a3.5 3.5 0 003.5-3.5h-4zm0-9.5v9.5h4V14h-4zm11.5-2H14v4h9.5v-4zm-.5.5a.5.5 0 01.5-.5v4a3.5 3.5 0 003.5-3.5h-4zm.5.5a.5.5 0 01-.5-.5h4A3.5 3.5 0 0023.5 9v4zM14 13h9.5V9H14v4zM12 1.5V11h4V1.5h-4zm.5.5a.5.5 0 01-.5-.5h4A3.5 3.5 0 0012.5-2v4zm.5-.5a.5.5 0 01-.5.5v-4A3.5 3.5 0 009 1.5h4zm0 9.5V1.5H9V11h4zM1.5 13H11V9H1.5v4zm.5-.5a.5.5 0 01-.5.5V9A3.5 3.5 0 00-2 12.5h4zm-.5-.5a.5.5 0 01.5.5h-4A3.5 3.5 0 001.5 16v-4zm9.5 0H1.5v4H11v-4zm2 11.5V14H9v9.5h4z"
+                fill="#252525" mask="url(#a)" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about margin_bottom">
+    <div class="container about__container">
+      <div class="section-name">About us</div>
+      <div class="title-box title_row">
+        <div class="title title_section">Sit bibendum id proin felis auctor erat ac.</div>
+        <div class="title-box__block">
+          <p class="title-box__text">Aliquam egestas hac morbi eu. Eros, elit est diam mattis laoreet faucibus lectus.
+            Cursus sed tellus augue morbi pulvinar. Consequat nisi, integer potenti consectetur. Sed leo massa morbi
+            iaculis viverra.</p>
+          <a href="#" class="show-all">read more
+            <img class="arrow" src="assets/images/icons/icon-arrow.svg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="about__box">
+        <div class="about__content">
+          <img src="assets/images/write-block.jpg" alt="" class="about__img">
+        </div>
+        <div class="about__aside">
+          <form action="/" class="form">
+            <h4 class="form__title">Write Me.</h4>
+            <p class="form__text">Sit et vulputate posuere id diam ac eget lacinia enim. Id congue sapien libero sed.
+              Aliquet amet eget placerat facilisis leo, sit consequat.</p>
+            <div class="form__box">
+              <div class="form__row row-2">
+                <label class="form__block" for="">
+                  <span class="form__control-name">Full Name</span>
+                  <input class="form__control" type="text">
+                </label>
+                <label class="form__block" for="">
+                  <span class="form__control-name">Phone</span>
+                  <input class="form__control" type="text">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block" for="">
+                  <span class="form__control-name">Email Address</span>
+                  <input class="form__control" type="text">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block" for="">
+                  <span class="form__control-name">Message</span>
+                  <textarea class="form__control">
+                  </textarea>
+                </label>
+              </div>
+              <button class="btn default_btn icon_btn btn_md">Send message
+                <img class="arrow" src="assets/images/icons/icon-arrow-mini.svg" alt="">
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="assets/scripts/index.js"></script>
 </body>
 
 </html>

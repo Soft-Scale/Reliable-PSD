@@ -1,0 +1,83 @@
+.swiper-buttons-box{
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  max-width: 169px;
+  width: 100%;
+}
+.swiper-button{
+  position: relative;
+  height: 70px;
+  width: 50%;
+  background: #F8F8F8;
+  border: 2px solid #252525;
+}
+.swiper-button-prev{
+  border-right: none;
+  left: 0;
+  &::after{
+    content: '';
+    background: url('/assets/images/icons/icon-arrow.svg');
+    transform: rotate(180deg);
+    background-size: 100%;
+    width: 20px;
+    height: 18px;
+  }
+}
+.swiper-button-next{  
+  border-left: none;
+  right: 0;
+  &::after{
+    content: '';
+    background: url('/assets/images/icons/icon-arrow.svg');
+    background-size: 100%;
+    width: 20px;
+    height: 18px;
+  }
+  &:before{
+    content: '';
+    left: 0;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 54px;
+    background: $color-dark;
+    opacity: 0.2;
+  }
+
+}
+@media (max-width: 1199px) {
+  .swiper-slide{
+    img{
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 767px) {  
+  .swiper-buttons-box{
+    max-width: 109px;
+  }
+  .swiper-button{
+    height: 50px;
+  }
+  .swiper-button-prev{
+    &::after{
+      width: 14px;
+      height: 12px;
+      
+    }
+  }
+  .swiper-button-next{
+    &::after{
+      width: 14px;
+      height: 12px;
+    }
+    &::before{
+      height: 34px;
+    }
+  }
+}

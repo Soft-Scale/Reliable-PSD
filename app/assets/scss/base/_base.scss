@@ -1,47 +1,131 @@
 body{
-  font-family: $font-proxima;
+  font-family: $font-poppins;
   overflow-x: hidden;
 }
 .img{
   max-width: 100%;
 }
 .container{
-  max-width: 1172px;
+  max-width: 1250px;
+  padding: 0 15px;
   margin: 0 auto;
 }
+.margin_bottom{
+  margin-bottom: 100px;
+}
+.title-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 72px;
+}
+.title-box__block{
+  width: 45%;
+}
+.title-box__text{
+  font-size: 16px;
+  line-height: 150%;
+  color: #5F5F5F;
+  margin-bottom: 24px;
+}
 .title{
-  font-family: $font-proxima-ebold;
-  font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 1.44px;
-  text-transform: uppercase;
-  position: relative;
-  max-width: 460px;
-  z-index: 1;
-  transition: all .3s;
+  font-weight: bold;
 
-  &::before{
-    content: '';
-    width: 28px;
-    height: 29px;
-    background: url('/assets/images/icons/icon-decor.svg') no-repeat;
-    position: absolute;
-    top: -47px;
-    left: 0;
-    z-index: -1;
+  &.main_title{
+    font-size: 90px;
+    line-height: 98px;
+    letter-spacing: -0.015em;
+  }
+  &.title_section{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 130%;
+    color: $color-dark;
+    max-width: 780px;
+    width: 100%;
   }
 
-  &.title_light{
-    color: $text-color;
-
-  }
-  &.title_dark{
-    color: $second-text-color;
-  }
   span{
     display: block;
   }
 }
+.title_row{
+
+  .title_section{
+    max-width: 50%;
+  }
+}
+a{
+  transition: .3s;
+  text-decoration: none;
+}
+
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .title{
+    &.main_title{
+      font-size: 70px;
+      line-height: 78px;
+    }
+  }
+}
+@media (max-width: 1023px) {
+  .title-box{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .title{
+    font-size: 40px;
+    &.title_section{
+      margin-bottom: 24px;
+    }
+    &.main_title{
+      font-size: 50px;
+      line-height: 58px;
+    }
+  }
+  .title_row{
+    flex-direction: column;
+
+    .title_section{
+      max-width: 100%;
+    }
+  }
+  .title-box__block{
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .title{
+    &.title_section{
+      font-size: 24px;
+      line-height: 130%;
+      margin-bottom: 16px;
+    }
+    &.main_title{
+      font-size: 30px;
+      line-height: 130%;
+    }
+  }
+  .title-box__text{
+    margin-bottom: 16px;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 62px;
+    background-color: rgba(0,0,0, 0.1);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+}
+
+
 
 .animated{
   -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

@@ -1,0 +1,47 @@
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: none;
+  width: 32px;
+  height: 32px;
+  svg{
+    height: auto;
+  }
+}
+.menu__line {
+  fill: none;
+  stroke: $color-light;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line-top {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line-middle {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line-bottom {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line-top {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line-middle {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -20;
+  stroke-width: 6;
+}
+.opened .line-bottom {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}

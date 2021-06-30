@@ -1,0 +1,43 @@
+.btn{
+  width: 100%;
+  padding: 15px 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  
+  &.btn_sm{
+    max-width: 167px;
+  }
+  &.btn_md{
+    max-width: 188px;
+  }
+  &.default_btn{
+    background: $bg-decor;
+    color: $color-light;
+  }
+  &.icon_btn{
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.1s;
+  }
+  &:hover{
+
+    .arrow{
+      transform: translateX(4px);
+    }
+  }
+  .arrow{
+    margin-left: 10px;
+    max-width: 11px;
+    transform: translateZ(0);
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+  }
+}
