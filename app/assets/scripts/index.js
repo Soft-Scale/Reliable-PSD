@@ -1,3 +1,4 @@
+/* Main slider */
 const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
@@ -10,9 +11,8 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
-// When the user scrolls the page, execute myFunction
+/* Sticky header */
 window.onscroll = function() {myFunction()};
-
 // Get the header
 var header = document.getElementById("header");
 
@@ -30,6 +30,5 @@ function myFunction() {
 
 /* Burger mobile menu */
 document.querySelector(".menu").addEventListener('click', function(){
-  console.log(document.querySelector(".nav"));
   document.querySelector(".nav").classList.toggle("active")
 });
