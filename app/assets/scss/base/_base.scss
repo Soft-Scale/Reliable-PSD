@@ -73,8 +73,8 @@ a{
   .title-box{
     align-items: flex-start;
     flex-direction: column;
+    margin-bottom: 50px;
   }
-
   .title{
     font-size: 40px;
     &.title_section{
@@ -97,6 +97,9 @@ a{
   }
 }
 @media (max-width: 767px) {
+  .margin_bottom{
+    margin-bottom: 50px;
+  }
   .title{
     &.title_section{
       font-size: 24px;
